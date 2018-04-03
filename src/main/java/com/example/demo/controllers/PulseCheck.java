@@ -16,7 +16,7 @@ public class PulseCheck {
 
     @RequestMapping("/check-pulse")
     public String checkStatus(){
-        pulseService.cliarCount();
+        pulseService.clearCount();
         return pulseService.getPulse();
     }
 }

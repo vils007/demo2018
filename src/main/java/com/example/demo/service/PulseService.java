@@ -14,7 +14,7 @@ public class PulseService {
     private RestTemplate restTemplate = new RestTemplate();
 
     private int count;
-    public void cliarCount(){
+    public void clearCount(){
         count = 0;
     }
 
