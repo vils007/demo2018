@@ -14,7 +14,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity httpSecurity) throws Exception{
         httpSecurity
                 .authorizeRequests()
-                .antMatchers("/readme.txt", "/pulse", "/check-pulse").permitAll()
+                .antMatchers("/readme.txt", "/pulse", "/check-pulse", "/event").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().permitAll()

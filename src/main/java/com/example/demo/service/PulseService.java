@@ -23,6 +23,7 @@ public class PulseService {
         count++;
         return restTemplate.getForObject("http://localhost:8080/pulse",String.class) + ". Retry = " + count;
     }
+
     @Recover
     public String recover(){
         return "NOT OK";
