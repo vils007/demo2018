@@ -32,7 +32,6 @@ public class EventController {
     @RequestMapping(value = ALL_EVENT, method = RequestMethod.GET)
     public List<EventDTO> getAllEvent() {
         Iterable<EventDTO> list = eventDAO.findAll();
-        log.info(list.toString());
         List<EventDTO> result = new ArrayList<EventDTO>();
         for (EventDTO l : list) result.add(l);
         return result;
@@ -40,7 +39,10 @@ public class EventController {
 
     @RequestMapping(value = FIND_BY_TYPE, method = RequestMethod.GET)
     public List<EventDTO> findByType(@PathVariable String type) {
-        return null;
+        Iterable<EventDTO> list = eventDAO.findByType(type);
+        List<EventDTO> result = new ArrayList<EventDTO>();
+        for (EventDTO l : list) result.add(l);
+        return result;
     }
 
 
