@@ -6,9 +6,6 @@ import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-/**
- * Created by Администратор on 02.04.2018.
- */
 @Service
 public class PulseService {
     private RestTemplate restTemplate = new RestTemplate();

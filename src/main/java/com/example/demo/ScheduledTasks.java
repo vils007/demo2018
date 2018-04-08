@@ -11,18 +11,12 @@ import org.springframework.stereotype.Component;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Created by Администратор on 05.04.2018.
- */
 @Component
 public class ScheduledTasks {
 
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
     private static final Logger log = LoggerFactory.getLogger(ScheduledTasks.class);
-
-    @Autowired
-    EventController eventController;
 
     @Autowired
     EventService eventService;

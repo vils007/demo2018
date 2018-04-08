@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Random;
 
 /**
- * Created by Администратор on 02.04.2018.
+ * Created on 02.04.2018.
  * используем spring-retry
- * /health по этому адресу будет не стабильный сервис 50/50
+ * /health по этому адресу будет 'не стабильный' сервис 50/50
  */
 
 @Controller

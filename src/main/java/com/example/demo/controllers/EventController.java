@@ -15,7 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Created by Администратор on 06.04.2018.
+ * Created on 06.04.2018.
  */
 @RestController
 public class EventController {

@@ -14,9 +14,6 @@ import javax.persistence.TypedQuery;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by Администратор on 06.04.2018.
- */
 @Service
 public class EventService {
 
