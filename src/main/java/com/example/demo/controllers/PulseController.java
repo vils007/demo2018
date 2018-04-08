@@ -10,7 +10,7 @@ import java.util.Random;
 /**
  * Created on 02.04.2018.
  * используем spring-retry
- * /health по этому адресу будет 'не стабильный' сервис 50/50
+ * /pulse по этому адресу будет 'не стабильный' сервис 50/50
  */
 
 @Controller

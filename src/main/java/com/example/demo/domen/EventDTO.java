@@ -26,36 +26,4 @@ public class EventDTO {
 
     @Column(name="EVENT_DT")
     private Date eventDt;
-
-//    public long getId() {
-//        return id;
-//    }
-//
-//    public void setId(long id) {
-//        this.id = id;
-//    }
-//
-//    public String getType() {
-//        return type;
-//    }
-//
-//    public void setType(String type) {
-//        this.type = type;
-//    }
-//
-//    public String getDescription() {
-//        return description;
-//    }
-//
-//    public void setDescription(String description) {
-//        this.description = description;
-//    }
-//
-//    public Date getEventDt() {
-//        return eventDt;
-//    }
-//
-//    public void setEventDt(Date eventDt) {
-//        this.eventDt = eventDt;
-//    }
 }
