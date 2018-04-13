@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.ScheduledTasks;
+
 import com.example.demo.domen.EventDAO;
 import com.example.demo.domen.EventDTO;
 import org.slf4j.Logger;
@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 import java.util.Date;
 import java.util.List;
 
