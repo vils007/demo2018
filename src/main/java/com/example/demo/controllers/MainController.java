@@ -14,4 +14,14 @@ public class MainController {
         return "hello-world";
     }
 
+    @RequestMapping("/hi")
+    public String showHi() {
+        return "hi";
+    }
+
+    @RequestMapping("/")
+    public String showIndex() {
+        return "index";
+    }
+
 }
