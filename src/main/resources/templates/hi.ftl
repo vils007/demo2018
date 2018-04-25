@@ -11,20 +11,22 @@
 <body>
 <div ng-controller="ListController">
     <div class="panel-heading"><span class="lead">{{tablename}}</span></div>
+    <input type="text" ng-model="query">
     <table class="table table-hover">
         <thead>
         <tr>
-            <th>ID</th>
+            <th><a href="" ng-click="sort('id')">ID</a></th>
             <th>Description</th>
             <th>Event_Date</th>
             <th>Type</th>
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="e in events">
+        <#--<tr ng-repeat="e in events | filter:query orderBy:sortField:reverse">-->
+        <tr ng-repeat="e in events | orderBy:sortField:reverse | filter:query">
             <td>{{e.id}}</td>
             <td>{{e.description}}</td>
-            <td>{{e.eventDt}}</td>
+            <td>{{e.eventDt | date:'yyyy/MM/dd'}}</td>
             <td>{{e.type}}</td>
         </tr>
         </tbody>

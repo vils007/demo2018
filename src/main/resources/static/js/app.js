@@ -5,6 +5,18 @@ var appList = angular.module('AppList',[]);
         })
         $scope.tablename = 'List of Events!!!';
 
+        $scope.sortField = undefined;
+        $scope.reverse = false;
+
+        $scope.sort = function (fieldName) {
+            if ($scope.sortField === fieldName) {
+                $scope.reverse = !$scope.reverse;
+            } else {
+                $scope.sortField = fieldName;
+                $scope.reverse = false;
+            }
+        };
+
 
 
         // $scope.events = [
