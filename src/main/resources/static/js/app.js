@@ -17,6 +17,13 @@ var appList = angular.module('AppList',[]);
             }
         };
 
+        $scope.isSortUp = function (fieldName) {
+            return $scope.sortField === fieldName && !$scope.reverse;
+        };
+        $scope.isSortDown = function (fieldName) {
+            return $scope.sortField === fieldName && $scope.reverse;
+        };
+
 
 
         // $scope.events = [

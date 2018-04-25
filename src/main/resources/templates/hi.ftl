@@ -5,8 +5,8 @@
     <script src="js/lib/angular.min.js"></script>
 <#--<script src="js/angular.js"></script>-->
     <script src="js/app.js"></script>
-    <link th:href="css/bootstrap.css" rel="stylesheet"/>
-    <link th:href="css/add.css" rel="stylesheet"/>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/app.css" rel="stylesheet"/>
 </head>
 <body>
 <div ng-controller="ListController">
@@ -15,14 +15,16 @@
     <table class="table table-hover">
         <thead>
         <tr>
-            <th><a href="" ng-click="sort('id')">ID</a></th>
+            <th><a href="" ng-click="sort('id')">ID
+                <#--<i class="glyphicon" ng-class="{'glyphicon-chevron-up' : isSortUp('id'),-->
+                                          <#--'glyphicon-chevron-down' : isSortDown('id')}"></i>-->
+            </a></th>
             <th>Description</th>
             <th>Event_Date</th>
             <th>Type</th>
         </tr>
         </thead>
         <tbody>
-        <#--<tr ng-repeat="e in events | filter:query orderBy:sortField:reverse">-->
         <tr ng-repeat="e in events | orderBy:sortField:reverse | filter:query">
             <td>{{e.id}}</td>
             <td>{{e.description}}</td>
