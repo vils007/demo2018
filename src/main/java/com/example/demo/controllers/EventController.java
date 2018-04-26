@@ -27,7 +27,7 @@ public class EventController {
 
     private static final Logger log = LoggerFactory.getLogger(EventController.class);
 
-    private static final String DELETE_BY_ID = "/delete_by_id";
+    private static final String DELETE_BY_ID = "/delete/{id}";
     private static final String FIND_BY_TYPE = "/type/{type}";
     private static final String ALL_EVENT = "/event";
     private static final String TYPE = "event controller";
@@ -49,13 +49,14 @@ public class EventController {
     }
 
     @RequestMapping(value = ALL_EVENT, method = RequestMethod.POST)
-    public void addEvent(@RequestBody String description) {
+    public void addEvent(@RequestParam(value = "description") String description) {
         eventService.addEvent(description,TYPE);
     }
 
     @RequestMapping(value = DELETE_BY_ID, method = RequestMethod.DELETE)
     public String delete(@PathVariable long id) {
         try {
+            log.info("deleteEventById = " + id);
             eventService.deleteEventById(id);
         }
         catch (Exception ex) {
