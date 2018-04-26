@@ -11,7 +11,7 @@
 <body>
 <div ng-controller="ListController">
     <div class="panel-heading"><span class="lead">{{tablename}}</span></div>
-    <input type="text" ng-model="query">
+    <input type="text" ng-model="query" placeholder="Such as . . .">
     <table class="table table-hover">
         <thead>
         <tr>

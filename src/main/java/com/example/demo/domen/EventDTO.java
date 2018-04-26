@@ -26,6 +26,13 @@ public class EventDTO {
     @Column(name="EVENT_DT")
     private Date eventDt;
 
+    public EventDTO(long id) {
+    }
+
+    public EventDTO() {
+
+    }
+
     public long getId() {
         return id;
     }

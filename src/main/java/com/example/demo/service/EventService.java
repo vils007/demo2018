@@ -17,7 +17,7 @@ import java.util.List;
 @Service
 public class EventService {
 
-    EntityManager entityManager;
+//    EntityManager entityManager;
 
     @Autowired
     EventDAO eventDAO;
@@ -35,5 +35,9 @@ public class EventService {
         event.setDescription(description);
         event.setType(type);
         eventDAO.save(event);
+    }
+
+    public void deleteEventById(long id){
+        eventDAO.deleteById(id);
     }
 }

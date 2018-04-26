@@ -20,10 +20,10 @@ public class ScheduledTasks {
     @Autowired
     EventService eventService;
 
-    @Scheduled(fixedRate = 5000)
+    @Scheduled(fixedRate = 500000)
     public void reportCurrentTime() {
 
-        eventService.addEvent("Task event fix rate = 5000", "scheduler");
+        eventService.addEvent("Task event fix rate = 500000", "scheduler");
         log.info(("The time is now " + dateFormat.format(new Date())));
     }
 
