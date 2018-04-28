@@ -60,16 +60,14 @@ public void addEvent(@RequestBody String description) {
 }
 
     @RequestMapping(value = DELETE_BY_ID, method = RequestMethod.DELETE)
-    public String delete(@PathVariable long id) {
+    public void delete(@PathVariable long id) {
         try {
             log.info("Delete Event By Id = " + id);
             eventService.deleteEventById(id);
         }
         catch (Exception ex) {
             log.info("Error deleting" + id);
-            return "Error deleting: " + ex.toString();
         }
-        return id + " :Ok";
     }
 
 }
