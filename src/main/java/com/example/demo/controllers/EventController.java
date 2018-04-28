@@ -48,19 +48,26 @@ public class EventController {
         return result;
     }
 
-    @RequestMapping(value = ALL_EVENT, method = RequestMethod.POST)
-    public void addEvent(@RequestParam(value = "description") String description) {
-        eventService.addEvent(description,TYPE);
-    }
+//    @RequestMapping(value = ALL_EVENT, method = RequestMethod.POST)
+//    public void addEvent(@RequestParam(value = "description") String description) {
+//        log.info("addEvent = description" + description);
+//        eventService.addEvent(description,TYPE);
+//    }
+@RequestMapping(value = ALL_EVENT, method = RequestMethod.POST)
+public void addEvent(@RequestBody String description) {
+    log.info("addEvent = description" + description);
+    eventService.addEvent(description,TYPE);
+}
 
     @RequestMapping(value = DELETE_BY_ID, method = RequestMethod.DELETE)
     public String delete(@PathVariable long id) {
         try {
-            log.info("deleteEventById = " + id);
+            log.info("Delete Event By Id = " + id);
             eventService.deleteEventById(id);
         }
         catch (Exception ex) {
-            return "Error deleting the news: " + ex.toString();
+            log.info("Error deleting" + id);
+            return "Error deleting: " + ex.toString();
         }
         return id + " :Ok";
     }

@@ -11,13 +11,25 @@
 <body>
 <div ng-controller="ListController">
     <div class="panel-heading"><span class="lead">{{tablename}}</span></div>
-    <input type="text" ng-model="query" placeholder="Such as . . .">
+    <table class="table table-hover">
+        <th>
+            <input type="text" ng-model="query" placeholder="Such as . . .">
+        </th>
+        <th>
+            <p>Delete <input type="text" ng-model="fildId" placeholder="delete id"></p>
+            <button type="button" ng-click="del(fildId)">Delete</button>
+        </th>
+        <th>
+            <p>Create Event <input type="text" ng-model="description" placeholder="description"></p>
+            <button type="button" ng-click="addEvent(description)">Create Event</button>
+        </th>
+    </table>
     <table class="table table-hover">
         <thead>
         <tr>
             <th><a href="" ng-click="sort('id')">ID
-                <#--<i class="glyphicon" ng-class="{'glyphicon-chevron-up' : isSortUp('id'),-->
-                                          <#--'glyphicon-chevron-down' : isSortDown('id')}"></i>-->
+            <#--<i class="glyphicon" ng-class="{'glyphicon-chevron-up' : isSortUp('id'),-->
+            <#--'glyphicon-chevron-down' : isSortDown('id')}"></i>-->
             </a></th>
             <th>Description</th>
             <th>Event_Date</th>

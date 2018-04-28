@@ -10,7 +10,6 @@ import static javafx.scene.input.KeyCode.T;
 
 @Transactional
 public interface EventDAO extends CrudRepository<EventDTO, Long> {
-
     public List<EventDTO> findAll();
 
     public List<EventDTO> findByType(String type);
