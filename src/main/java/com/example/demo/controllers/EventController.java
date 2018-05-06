@@ -37,6 +37,7 @@ public class EventController {
         Iterable<EventDTO> list = eventDAO.findAll();
         List<EventDTO> result = new ArrayList<EventDTO>();
         for (EventDTO l : list) result.add(l);
+        log.info("GET ALL_EVENTS ");
         return result;
     }
 
@@ -66,7 +67,7 @@ public void addEvent(@RequestBody String description) {
             eventService.deleteEventById(id);
         }
         catch (Exception ex) {
-            log.info("Error deleting" + id);
+            log.info("Error Deleting Event By Id = " + id);
         }
     }
 

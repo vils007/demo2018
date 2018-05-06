@@ -3,7 +3,6 @@
     <meta charset="utf-8">
     <title>Events</title>
     <script src="js/lib/angular.min.js"></script>
-<#--<script src="js/angular.js"></script>-->
     <script src="js/app.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet"/>
     <link href="css/app.css" rel="stylesheet"/>
