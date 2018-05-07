@@ -17,11 +17,11 @@
         </th>
         <th>
             <p>Delete <input type="text" ng-model="fildId" placeholder="delete id"></p>
-            <button type="button" ng-click="del(fildId)">Delete</button>
+            <button type="button" ng-click="del(fildId);findlist()">Delete</button>
         </th>
         <th>
             <p>Create Event <input type="text" ng-model="description" placeholder="description"></p>
-            <button type="button" ng-click="addEvent(description)">Create Event</button>
+            <button type="button" ng-click="addEvent(description);findlist()">Create Event</button>
         </th>
     </table>
     <table class="table table-hover">
@@ -37,12 +37,14 @@
         </tr>
         </thead>
         <tbody>
+        <div ng-bind>
         <tr ng-repeat="e in events | orderBy:sortField:reverse | filter:query">
             <td>{{e.id}}</td>
             <td>{{e.description}}</td>
             <td>{{e.eventDt | date:'yyyy/MM/dd'}}</td>
             <td>{{e.type}}</td>
         </tr>
+        </div>
         </tbody>
     </table>
 </div>

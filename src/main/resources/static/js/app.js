@@ -15,12 +15,10 @@ appList.controller('ListController', ['$scope', '$http', '$location', function (
 
     $scope.del = function (fildId) {
         $http.delete('delete/' + fildId);
-        $scope.events = null;
         $scope.findlist();
     };
     $scope.addEvent = function (description) {
         $http.post('event', description);
-        $scope.events = null;
         $scope.findlist();
     };
 
