@@ -12,7 +12,8 @@
     <div class="panel-heading"><span class="lead">{{tablename}}</span></div>
     <table class="table table-hover">
         <th>
-            <input type="text" ng-model="query" placeholder="Such as . . .">
+            <p><input type="text" ng-model="query" placeholder="Such as . . ."></p>
+            <button type="button" ng-click="findlist()">Refresh</button>
         </th>
         <th>
             <p>Delete <input type="text" ng-model="fildId" placeholder="delete id"></p>

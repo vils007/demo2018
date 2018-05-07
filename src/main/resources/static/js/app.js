@@ -1,11 +1,11 @@
 var appList = angular.module('AppList', []);
 appList.controller('ListController', ['$scope', '$http', '$location', function ($scope, $http) {
-    $scope.findEventsList = function () {
+    $scope.findlist = function () {
         $http.get('event').success(function (data, status) {
             $scope.events = data;
         })
     };
-    $scope.findEventsList;
+    $scope.findlist();
     $scope.tablename = 'List of Events!!!';
 
     $scope.sortField = undefined;
@@ -15,11 +15,13 @@ appList.controller('ListController', ['$scope', '$http', '$location', function (
 
     $scope.del = function (fildId) {
         $http.delete('delete/' + fildId);
-        $scope.findEventsList;
+        $scope.events = null;
+        $scope.findlist();
     };
     $scope.addEvent = function (description) {
         $http.post('event', description);
-        $scope.findEventsList;
+        $scope.events = null;
+        $scope.findlist();
     };
 
     $scope.sort = function (fieldName) {
