@@ -17,11 +17,11 @@
         </th>
         <th>
             <p>Delete <input type="text" ng-model="fildId" placeholder="delete id"></p>
-            <button type="button" ng-click="del(fildId);findlist()">Delete</button>
+            <button type="button" ng-click="del(fildId)">Delete</button>
         </th>
         <th>
             <p>Create Event <input type="text" ng-model="description" placeholder="description"></p>
-            <button type="button" ng-click="addEvent(description);findlist()">Create Event</button>
+            <button type="button" ng-click="addEvent(description)">Create Event</button>
         </th>
     </table>
     <table class="table table-hover">
