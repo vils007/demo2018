@@ -36,9 +36,10 @@
             <th>Type</th>
         </tr>
         </thead>
+        <p>How Many <input type="number" ng-model="howMany" placeholder="10"></p>
         <tbody>
         <div ng-bind>
-        <tr ng-repeat="e in events | orderBy:sortField:reverse | filter:query">
+        <tr ng-repeat="e in events | orderBy:sortField:reverse | filter:query | limitTo:howMany">
             <td>{{e.id}}</td>
             <td>{{e.description}}</td>
             <td>{{e.eventDt | date:'yyyy/MM/dd'}}</td>
@@ -46,6 +47,7 @@
         </tr>
         </div>
         </tbody>
+
     </table>
 </div>
 </body>
